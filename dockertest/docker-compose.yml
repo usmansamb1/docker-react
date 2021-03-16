@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mynewwebserver:
+    build: .
+      context:  .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3004:3000"
+    volumes:
+      - /app/kitb/node_modules
+      - .:/app/kitb
+    
