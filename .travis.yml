@@ -6,4 +6,4 @@ before_install:
   - docker build -t usmansamb1/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run usmansamb1/docker-react CI=true npm test
+  - docker run -e CI=true usmansamb1/docker-react npm run test
